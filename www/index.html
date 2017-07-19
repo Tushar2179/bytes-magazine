@@ -17,6 +17,8 @@
     <!-- -------------------- CSS ------------------------------------------- -->
     <link type="text/css" rel="stylesheet" href="css/materialize.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <!-- -------------------- SCRIPTS ------------------------------------------- -->
     <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
@@ -31,7 +33,6 @@
 </head>
 
 <body>
-
 
 
 
@@ -97,6 +98,7 @@
 
 
 
+
         <div class="row">
 
 
@@ -143,7 +145,24 @@
 
             </div>
 
-
+<!feedback start>
+        <div id="feedback">
+		<div id="feedback-form" style='display:none;' class="col-xs-4 col-md-4 panel panel-default">
+			<form method="POST" action="" class="form panel-body" role="form" onsubmit="mailto:shridhar.iyer16@gmail.com">
+				<div class="form-group">
+					<input class="form-control" name="email" autofocus placeholder="Your e-mail" type="email" />
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" name="body" required placeholder="Please write your feedback here..." rows="5"></textarea>
+				</div>
+                
+				<button class="btn btn-primary pull-right" type="submit">Send</button>
+			</form>
+		</div>
+		<div id="feedback-tab">Feedback</div>
+	</div>
+<!feedback end>
+        
 
             <div class="col s12 m3">
                 <div class="row">
@@ -230,7 +249,10 @@
     <!-- ---------------------------SCRIPTS----------------------------------- -->
 
 
+    <script src="js/feedback.js"></script>
     <script type="text/javascript" src="js/script.js" id="global-script"></script>
+    
+
     <script>
         hideWait();
 
